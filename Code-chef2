@@ -1,4 +1,4 @@
-#include <iostream>
+##include <iostream>
 #include <string>
 using namespace std;
 int main()
@@ -9,14 +9,14 @@ int main()
     {   
         int n;
         cin>>n;
+        string s;
+        cin>>s;
         string enc="";
-        if(n%2==0)
-        {
-          string s;
-          for (int i = 0; i <n; i += 2) 
+        for (int i = 0; i <n; i += 2) 
          {
-           string a=s.substr(i,2);
-           string b=s.substr(2,n);
+           string a="";
+            a+=s[i];
+            a+=s[i+1];
           if(a=="00")
                 enc+="A";
           else if(a=="01")
@@ -26,8 +26,8 @@ int main()
           else if(a=="11")
                 enc+="G";
           }
-        }
-        cout<<enc;
+        
+        cout<<enc<<endl;
         
       }
 }
