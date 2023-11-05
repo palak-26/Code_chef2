@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{  
+    int t;
+    cin>>t;
+    while (t--)
+    {   
+        int n;
+        cin>>n;
+        string enc="";
+        if(n%2==0)
+        {
+          string s;
+          for (int i = 0; i <n; i += 2) 
+         {
+           string a=s.substr(i,2);
+           string b=s.substr(2,n);
+          if(a=="00")
+                enc+="A";
+          else if(a=="01")
+                enc+="T";
+          else if(a=="10")
+                enc+="C";
+          else if(a=="11")
+                enc+="G";
+          }
+        }
+        cout<<enc;
+        
+      }
+}
